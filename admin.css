@@ -1,0 +1,152 @@
+html, body {
+            min-height: 100%;
+            direction: rtl;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        body, div, form, select, p {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            color: #eee;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        h2 {
+            margin: 0 0 0 8px;
+        }
+
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 25px;
+            
+        }
+
+        .left-part, form {
+            padding: 25px;
+        }
+
+        .left-part {
+            text-align: center;
+        }
+
+        .fa-graduation-cap {
+            font-size: 72px;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, select, textarea {
+            padding: 5px;
+            margin-bottom: 30px;
+            
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+
+            input::placeholder, textarea::placeholder {
+                color: red;
+                font-size: large;
+                text-align: left;
+            }
+
+        option:focus {
+            border: none;
+        }
+
+        option {
+            background: black;
+            border: none;
+        }
+
+        .btn-item, button {
+            padding: 10px 5px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #26a9e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .btn-item {
+            display: inline-block;
+            margin: 20px 5px 0;
+        }
+
+        button {
+            width: 100%;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            margin: 20px;
+            float: left;
+            width: 60%;
+            text-align: left;
+        }
+        ul button {
+            width: 200px;
+        }
+        .leftcolumn img {
+            width: 100%;
+            height: 460px;
+          }
+
+            button:hover, .btn-item:hover {
+                background: #85d6de;
+            }
+
+        @media (min-width: 568px) {
+            html, body {
+                height: 100%;
+            }
+
+            .main-block {
+                flex-direction: row;
+                height: calc(100% - 50px);
+            }
+
+            .left-part, form {
+                flex: 1;
+                height: auto;
+            }
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            width:100%;
+            border-spacing: 5px;
+            text-align: center;
+            
+        }
+        th, td {
+            padding: 10px;
+        }

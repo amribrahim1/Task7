@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BLOGS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+</head>
+<body>
+
+ 
+
+      <!-- Container for sign in modal -->
+      <div id="myModal" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+        <div>
+        <span class="close">&times;</span>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+          <p>Enter an email and password below and either sign in to an existing account or sign up</p>
+
+          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+          &nbsp;&nbsp;&nbsp;
+          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+          <br/><br/>
+          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
+
+          <!-- Container where we'll display sign-in status -->
+          <div class="quickstart-user-details-container"><br>
+            sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+            <pre><code id="quickstart-account-details"></code></pre>
+          </div>
+        </div>
+        </div>
+      </div>
+<div class="header">
+  <button id="myBtn">Sign in</button>
+  <h1>Amr Eraky Blog</h1>
+</div>
+<br>
+<ul class="leftcolumn" id="ex-list"></ul>
+<ul id="ccc"></ul>
+    
+    <h2>Add a comment or Suggestion</h2>
+    <form>
+
+      <div class="form-group">
+        <label for="fullNameField"> Your Name: </label>
+        <input type="text" class="form-control" id="Name">
+      </div>
+
+      <div class="form-group">
+        <label for="notesField">Your Comment: </label>
+        <!-- textarea are like inputs but they're for long text! -->
+        <textarea class="form-control" id="Comment"></textarea>
+      </div>
+
+      <!-- it's important NOT to use <button> here because that will do something els (that's why we use <a> and make it look like a button using css -->
+      <a class="btn btn-default" onclick="submitComment()">Add</a>
+    </form>
+  </div>
+  
+  <div>
+    <h3>Previous Comments</h3>
+    <div id="previousComments">
+      <!-- We will use javascript to insert html for the orders list here -->
+      <!-- if you don't want orders to show on the homepage, you can duplicate the page and remove this from here, leave the other one with a werid name so only you can find it -->
+    </div>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="user.js"></script> 
+<script src="displayBlogs.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyAqpot2vodBMGEuW9VWCbqu-DFeKsLOyLo",
+    authDomain: "test-a2f63.firebaseapp.com",
+    databaseURL: "https://test-a2f63.firebaseio.com",
+    projectId: "test-a2f63",
+    storageBucket: "test-a2f63.appspot.com",
+    messagingSenderId: "153323254705",
+    appId: "1:153323254705:web:32f4522a0d2f80577a4390"
+};
+firebase.initializeApp(config);
+</script>
+
+
+
+</script>
+</body>
+</html>

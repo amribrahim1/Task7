@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BLOGS admin</title>
+	<meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <div class="main-block">
+        <div class="left-part">
+
+        </div>
+
+        <form id="add-blog" dir="ltr" name="RegForm" action="/">
+            <div class="title">
+                <i class="fas fa-pencil-alt"></i>
+                <h2>BLOGS admin</h2>
+            </div>
+            <div class="info">
+                <input type="text" name="title" id="title" placeholder="Title" required>
+                <textarea class="fname" type="text" name="Description" id="Description" required autofocus placeholder="Description"></textarea>
+                <input type="text" name="id" id="id" required maxlength="9" title="Don't start with 0" placeholder="ID (Don't start with 0)" pattern="[1-9]+[0-9]">
+                <input type="file" name="img" id="img" required accept="image/*">
+            </div>
+            <button onClick='submitDetailsForm()' type="submit" name="submit" id="submit" value="submit">add</button>
+        </form>
+    </div>
+    <ul id="ex-list">
+    </ul>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="displayBlogsAdmin.js"></script> 
+    <script src="addBlog.js"></script>	
+    <script>
+        var config = {
+    apiKey: "AIzaSyAqpot2vodBMGEuW9VWCbqu-DFeKsLOyLo",
+    authDomain: "test-a2f63.firebaseapp.com",
+    databaseURL: "https://test-a2f63.firebaseio.com",
+    projectId: "test-a2f63",
+    storageBucket: "test-a2f63.appspot.com",
+    messagingSenderId: "153323254705",
+    appId: "1:153323254705:web:32f4522a0d2f80577a4390"
+};
+// Initialize Firebase
+firebase.initializeApp(config);
+</script>
+</body>
+</html>
